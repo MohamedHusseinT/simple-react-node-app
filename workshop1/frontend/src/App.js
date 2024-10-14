@@ -13,7 +13,7 @@ function App() {
   const [data, setData] = useState([]);
   async function getData(){
     try {
-      axios.defaults.baseURL = "your-backend-base-url";
+      axios.defaults.baseURL = "http://workshop1-lb01-82469052.us-east-2.elb.amazonaws.com";
       const res = await axios.get("/students");
       setData(res.data);
     } catch (error) {
